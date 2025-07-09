@@ -64,4 +64,39 @@ public class Main {
         s.close();
     }
 }
+//2.student marks calculator :-
+class Main{
+    public static void main(String[] args) {
+        int[] marks=new int[5];
+        int totalmarks=0;
+        String grade;
+        Scanner s = new Scanner(System.in);
+        System.out.println("enter your marks at each 5 subjects :-");
+        marks[0]=s.nextInt();
+        marks[1]=s.nextInt();
+        marks[2]=s.nextInt();
+        marks[3]=s.nextInt();
+        marks[4]=s.nextInt();
+
+        for(int i=0;i<6;i++){
+            totalmarks=totalmarks+i;
+        }
+        int avg=totalmarks/5;
+        if(avg>=85){
+            grade="A";
+        }if(avg>=65&&avg<85){
+            grade="B";
+        }if(avg>=55&&avg<65){
+            grade="C";
+        }if(avg>=45&&avg<55){
+            grade="D";
+        }else{
+            grade="FAIL...";
+        }
+        System.out.println("STUDENT'S RESULT :-");
+                System.out.println("TotalMarks : "+totalmarks);
+                System.out.println("Average percent : "+avg+"%");
+                System.out.println("Grade : "+grade);
+    }
+}
 
